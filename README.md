@@ -1,4 +1,4 @@
-## Домашнее задание: [Js. Основы](https://github.com/yandex-shri/lectures/blob/master/15-js-basics.md)
+## Домашнее задание: [Js. Основы](https://github.com/yandex-shri/lectures/blob/master/16-js-basics.md)
 
 ### new
 
