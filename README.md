@@ -76,7 +76,7 @@ function isNegativeZero (x) {
 		в) в Разработке...
 <br/>
 
-		<b>Ответы:</b>
+<b>Ответы:</b>
 <ol>
 		<li> [] + {} 
 
@@ -87,18 +87,17 @@ function isNegativeZero (x) {
 		</li>
 		<li> 
 <code>
-			A = function( arg ){  
-					this.arg = arg;
-			};
+function A( arg ){  
+	this.arg = arg;
+};
+function myNew ( foo, args ) {
+	 var obj = { '__proto__': foo.prototype };
+	 foo.call ( obj, args );
+	 return obj;
+};
+var a = myNew( A , 10 );
 
-			function myNew ( foo, args ) {
-				 var obj = { '__proto__': foo.prototype };
-				 foo.call ( obj, args );
-				 return obj;
-			}
-			var a = myNew( A , 10 )
-
-			console.log( a.arg );
+console.log( a.arg );
 </code>
 	</li>
-<ol>
+</ol>
