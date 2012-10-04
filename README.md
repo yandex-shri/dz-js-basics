@@ -66,3 +66,39 @@ function isNegativeZero (x) {
 
 
 См. также: [пост про домашние задания](http://clubs.ya.ru/4611686018427468886/replies.xml?item_no=450).
+
+
+		Задание 0:
+		а) Чему равно [] + {}
+<br/>
+		б) Напишите функцию эмулирующую оператор new 
+<br/>
+		в) в Разработке...
+<br/>
+
+		<b>Ответы:</b>
+<ol>
+		<li> [] + {} 
+
+			Mассив преобразуется в пустую строку,  метод toString объекта выводит фразу - '[object Object]'
+<p>
+			Ответ : [] + {} = '' + '[object Object]' = '[object Object]'
+</p>
+		</li>
+		<li> 
+<code>
+			A = function( arg ){  
+					this.arg = arg;
+			};
+
+			function myNew ( foo, args ) {
+				 var obj = { '__proto__': foo.prototype };
+				 foo.call ( obj, args );
+				 return obj;
+			}
+			var a = myNew( A , 10 )
+
+			console.log( a.arg );
+</code>
+	</li>
+<ol>
