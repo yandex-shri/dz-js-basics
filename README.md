@@ -88,8 +88,8 @@ function isNegativeZero (x) {
 </li>
 		
 <li> 
+	
 ```javascript
-
 function A( arg ){  
 	this.arg = arg;
 };
