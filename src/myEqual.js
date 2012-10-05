@@ -27,7 +27,7 @@ function myEqual(x, y) {
       type_y = Type(y);
 
   //1
-  if (type_x === type_x) {
+  if (type_x === type_y) {
     //1.a
     if (type_x === 'Undefined') {
       return true;
