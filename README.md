@@ -79,15 +79,16 @@ function isNegativeZero (x) {
 
 <b>Ответы:</b>
 <ol>
-		<li> [] + {} 
+<li> [] + {} 
 
 			Mассив преобразуется в пустую строку,  метод toString объекта выводит фразу - '[object Object]'
 <p>
 			Ответ : [] + {} = '' + '[object Object]' = '[object Object]'
 </p>
-		</li>
-		<li> 
-<code>
+</li>
+		
+<li> 
+```javascript
 
 function A( arg ){  
 	this.arg = arg;
@@ -102,9 +103,8 @@ function myNew ( foo, args ) {
 var a = myNew( A , 10 );
 
 console.log( a.arg );
-
-</code>
-	</li>
+```
+</li>
 	<li>
 under constructions
 	</li>
