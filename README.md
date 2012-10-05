@@ -68,12 +68,13 @@ function isNegativeZero (x) {
 См. также: [пост про домашние задания](http://clubs.ya.ru/4611686018427468886/replies.xml?item_no=450).
 
 
-		Задание 0:
-		а) Чему равно [] + {}
+		Задание:
+<br/>		
+		0) Чему равно [] + {}
 <br/>
-		б) Напишите функцию эмулирующую оператор new 
+		1) Напишите функцию эмулирующую оператор new 
 <br/>
-		в) в Разработке...
+		2) в Разработке...
 <br/>
 
 <b>Ответы:</b>
@@ -87,6 +88,7 @@ function isNegativeZero (x) {
 		</li>
 		<li> 
 <code>
+
 function A( arg ){  
 	this.arg = arg;
 };
@@ -98,6 +100,10 @@ function myNew ( foo, args ) {
 var a = myNew( A , 10 );
 
 console.log( a.arg );
+
 </code>
+	</li>
+	<li>
+under constructions
 	</li>
 </ol>
