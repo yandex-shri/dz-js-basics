@@ -16,6 +16,17 @@
 function myNew(Constructor, args) {}
 ```
 
+В качестве проверки на `[[Construct]]` используйте следующую функцию. Она не совсем точена, но из клиента `[[Construct]]`
+больше никак не проверить.
+```javascript
+function isConstructor(func) {
+    return typeof func === "function" && func.hasOwnProperty('prototype');
+}
+
+// isConstructor(String.prototype.match) === false
+// isConstructor(String) === true
+```
+
 Напишите тест, который порывает все особенности этого алгоритма. Будет здорово если вы приложите ссылку на jsfiddle.net
 
 ### ==
