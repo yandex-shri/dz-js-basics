@@ -52,7 +52,7 @@ function myEqual(x, y) {
       }
 
       //1.c.iii
-      if (x === y && (x !== 0)) {
+      if (x === y) {
         return true;
       }
 
