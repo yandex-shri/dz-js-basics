@@ -15,6 +15,8 @@ describe('"The Abstract Equality Comparison Algorithm" simulation', function() {
 
         'NUMERIC (5)': 5,
         'NUMERIC (0)': 0,
+        'NUMERIC (-0)': -0,
+        'NUMERIC (+0)': +0,
         'NUMERIC (NAN)': parseInt('NAN'),
         'NUMERIC (INFINITY)': 1/0,
 
