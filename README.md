@@ -88,22 +88,21 @@ function isNegativeZero (x) {
 </li>
 		
 <li> 
-	
-```javascript
+<code>
 function A( arg ){  
 	this.arg = arg;
 };
-
+<br/>
 function myNew ( foo, args ) {
 	 var obj = { '__proto__': foo.prototype };
 	 foo.call ( obj, args );
 	 return obj;
 };
-
+<br/>
 var a = myNew( A , 10 );
-
+<br/>
 console.log( a.arg );
-```
+</code>
 </li>
 	<li>
 under constructions
