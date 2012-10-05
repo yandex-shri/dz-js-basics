@@ -68,7 +68,7 @@ function isNegativeZero (x) {
 См. также: [пост про домашние задания](http://clubs.ya.ru/4611686018427468886/replies.xml?item_no=450).
 
 
-		Задание:
+<b>Задание:</b>
 <br/>		
 		0) Чему равно [] + {}
 <br/>
@@ -92,11 +92,13 @@ function isNegativeZero (x) {
 function A( arg ){  
 	this.arg = arg;
 };
+
 function myNew ( foo, args ) {
 	 var obj = { '__proto__': foo.prototype };
 	 foo.call ( obj, args );
 	 return obj;
 };
+
 var a = myNew( A , 10 );
 
 console.log( a.arg );
