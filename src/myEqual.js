@@ -16,6 +16,10 @@ function isNegativeZero (x) {
   return x === 0 && (1 / x) === -Infinity;
 }
 
+function toPrimitive(x) {
+  return Object.prototype.valueOf.call(x);
+}
+
 /**
  * @param {Mixed} x
  * @param {Mixed} y
@@ -104,6 +108,17 @@ function myEqual(x, y) {
     return myEqual(Number(x).valueOf(), y);
   }
 
+  //Strange, specification does not cover array comparison? huh =(
+
+  if (type_x === 'Array') {
+    return myEqual(x.toString(), y);
+  }
+
+  if (type_y === 'Array') {
+    return myEqual(x, y.toString());
+  }
+
+
   //6
   if (type_x === 'Boolean') {
     return myEqual(Number(x).valueOf(), y);
@@ -116,13 +131,14 @@ function myEqual(x, y) {
 
   //8
   if ((type_x === 'String' || type_x === 'Number') && type_y === 'Object') {
-    return myEqual(x, y.valueOf());
+    return myEqual(x, y.toString());
   }
 
   //9
   if (type_x === 'Object' && (type_y === 'String' || type_y === 'Number')) {
-    return myEqual(x.valueOf(), y);
+    return myEqual(x.toString(), y);
   }
+
 
   //10
   return false;
