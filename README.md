@@ -49,13 +49,15 @@ function myEqual(x, y) {}
 
 
 ```javascript
+var allowedTypes = ["Object", "Undefined", "Null", "Boolean", "Number", "String"];
 /**
  * @param {Mixed} x
  *
  * @return {String}
  */
 function Type(x) {
-    return Object.prototype.toString.call(x).replace(/^\[object\s|\]$/g, '');
+    var type = Object.prototype.toString.call(x).replace(/^\[object\s|\]$/g, '');
+    return ~allowedTypes.indexOf(type) && type || "Object";
 }
 ```
 
