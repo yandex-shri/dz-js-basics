@@ -10,6 +10,7 @@ describe('"The Abstract Equality Comparison Algorithm" simulation', function() {
         'ARRAY (EMPTY)': [],
 
         'STRING (test)': 'test',
+        'STRING (1,2,3)': '1,2,3',
         'STRING (0)': '0',
         'STRING (EMPTY)': '',
 
@@ -30,10 +31,14 @@ describe('"The Abstract Equality Comparison Algorithm" simulation', function() {
           b = TYPES[y],
           TEST = x + ' == ' + y + ' SHOULD BE ' + ((a == b) ? 'TRUE' : 'FALSE');
 
-      it( TEST, function() {
+      (function(title, a, b) {
+        
+        it(title, function() {
+          expect(myEqual(a, b)).toEqual(a == b);
+        });
 
-        expect(myEqual(a, b)).toEqual(a == b);
-      });
+      }(TEST, a, b));
+      
     }
   }
 
