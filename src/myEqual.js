@@ -1,10 +1,12 @@
+var allowedTypes = ["Object", "Undefined", "Null", "Boolean", "Number", "String"];
 /**
  * @param {Mixed} x
  *
  * @return {String}
  */
 function Type(x) {
-  return Object.prototype.toString.call(x).replace(/^\[object\s|\]$/g, '');
+  var type = Object.prototype.toString.call(x).replace(/^\[object\s|\]$/g, '');
+  return ~allowedTypes.indexOf(type) && type || "Object";
 }
 
 /**
@@ -107,17 +109,6 @@ function myEqual(x, y) {
   if (type_x === 'String' && type_y === 'Number') {
     return myEqual(Number(x).valueOf(), y);
   }
-
-  //Strange, specification does not cover array comparison? huh =(
-
-  if (type_x === 'Array') {
-    return myEqual(x.toString(), y);
-  }
-
-  if (type_y === 'Array') {
-    return myEqual(x, y.toString());
-  }
-
 
   //6
   if (type_x === 'Boolean') {
